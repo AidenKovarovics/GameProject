@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="test 2">
-      <change afterPath="$PROJECT_DIR$/Level 1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Level 2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Level 3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movement.py" afterDir="false" />
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Second Test Commit">
+      <change afterPath="$PROJECT_DIR$/MoveControl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movement.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AidenKovarovics"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AidenKovarovics/GameProject.git",
+    "accountId": "dd507614-7318-4888-8c70-a2a169d98caf"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -37,6 +49,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Level 1.executor": "Run",
+    "Python.Movement.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
   }
@@ -67,6 +81,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test 2" />
