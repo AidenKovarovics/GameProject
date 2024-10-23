@@ -3,12 +3,8 @@ import pygame
 import sys
 
 
-def movement(startx, starty):
-
-    #initialize rect at starting coord and movement = 0
-    playerRect = pygame.Rect((startx, starty), (10, 10))
-
-
+def movement_controls(): #playerColor):
+    playerBuffer = 0
     movementUD = 0
     movementLR = 0
 
@@ -25,6 +21,10 @@ def movement(startx, starty):
         movementUD = -5
 
 
-    movingPlayer = playerRect.move(movementLR, movementUD)
+
+
+
+    return movementLR, movementUD, #playerBuffer
+
 
 

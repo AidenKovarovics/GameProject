@@ -1,6 +1,8 @@
 import pygame
 import sys
-from MoveControl import movement
+from MoveControl import movement_controls
+from WallCheck import touching_wall
+
 
 def level_one():
 
@@ -11,7 +13,7 @@ def level_one():
     screenWidth = 1200
     screenHeight = 792
     mazeStartCoordx = 0
-    mazeStartCoordy = 0
+    mazeStartCoordy = 420
 
     #screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
@@ -26,6 +28,13 @@ def level_one():
     grassBackground = pygame.transform.scale(grassBackground, (screenWidth, screenHeight))
 
 
+
+    #player
+    playerRect = pygame.Rect(mazeStartCoordx, mazeStartCoordy, 44, 30)
+
+    #player image load
+    playerImage = pygame.image.load("RemasteredBlob.png").convert_alpha()
+    playerImage = pygame.transform.scale(playerImage, (playerRect.width, playerRect.height))
 
 
 
@@ -49,7 +58,25 @@ def level_one():
         screen.blit(mazeTemplate, (0, 0))
 
 
-        movement(mazeStartCoordx, mazeStartCoordy)
+
+        screen.blit(playerImage, (playerRect.x, playerRect.y))
+
+
+
+        storedRect = playerRect.copy()
+
+
+        movementLR, movementUD = movement_controls()
+
+        playerRect = playerRect.move(movementLR, movementUD)
+
+
+
+        touchingWall = touching_wall(screen, playerRect)
+
+        if touchingWall == True:
+            playerRect = storedRect
+
 
         #final screen updates + clock adjusts
         pygame.display.flip()
