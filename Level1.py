@@ -36,6 +36,15 @@ def level_one():
     playerImage = pygame.image.load("RemasteredBlob.png").convert_alpha()
     playerImage = pygame.transform.scale(playerImage, (playerRect.width, playerRect.height))
 
+    #enemy
+    enemyRect = pygame.Rect(1100, 180, 60, 30)
+    enemyMovement = 3
+
+    #enemy image load
+    enemyImage = pygame.image.load("enemy rectangle.png").convert_alpha()
+    enemyImage = pygame.transform.scale(enemyImage, (enemyRect.width, enemyRect.height))
+
+
 
 
 
@@ -60,6 +69,7 @@ def level_one():
 
 
         screen.blit(playerImage, (playerRect.x, playerRect.y))
+        screen.blit(enemyImage,(enemyRect.x, enemyRect.y))
 
 
 
@@ -77,9 +87,22 @@ def level_one():
         if touchingWall == True:
             playerRect = storedRect
 
+        #enemy rect movement
+        enemyRect = enemyRect.move(enemyMovement, 0)
+
+        if enemyRect.x >= 1125:
+            enemyMovement = -1
+        if enemyRect.x <= 960:
+            enemyMovement = 1
+
+        #check for player collision
+        if playerRect.colliderect(enemyRect) == True:
+            levelRestart = True
+            return levelRestart
+
+
 
         #final screen updates + clock adjusts
         pygame.display.flip()
         pygame.time.Clock().tick(60)
 
-level_one()
