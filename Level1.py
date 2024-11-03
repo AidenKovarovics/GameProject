@@ -15,6 +15,8 @@ def level_one():
     mazeStartCoordx = 0
     mazeStartCoordy = 420
 
+    coinCount = 4
+
     #screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 

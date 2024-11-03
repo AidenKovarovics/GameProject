@@ -5,6 +5,6 @@ from Level1 import level_one
 
 while True:
     level_one()
-    restartLevel = level_one()
-    if restartLevel == True:
+    restartLevel1 = level_one()
+    if restartLevel1 == True:
         level_one()

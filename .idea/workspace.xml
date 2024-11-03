@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character">
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main">
+      <change afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,16 +47,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Level 1.executor": "Run",
-    "Python.MoveControl.executor": "Run",
-    "Python.Movement.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Level 1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Level1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MoveControl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Movement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start Screen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -95,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729659440656</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main">
+      <option name="closed" value="true" />
+      <created>1729827648254</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729827648254</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main">
+      <option name="closed" value="true" />
+      <created>1729827658185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729827658185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +133,7 @@
     <MESSAGE value="test 2" />
     <MESSAGE value="Started on level 1 and movement controls" />
     <MESSAGE value="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character" />
+    <MESSAGE value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
   </component>
 </project>
