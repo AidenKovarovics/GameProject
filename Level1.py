@@ -2,6 +2,7 @@ import pygame
 import sys
 from MoveControl import movement_controls
 from WallCheck import touching_wall
+from randCoin import rand_coin
 
 
 def level_one():
@@ -47,8 +48,7 @@ def level_one():
     enemyImage = pygame.transform.scale(enemyImage, (enemyRect.width, enemyRect.height))
 
 
-
-
+    coinRects = rand_coin(screen, coinCount)
 
     #main loop
     while True:
@@ -73,7 +73,11 @@ def level_one():
         screen.blit(playerImage, (playerRect.x, playerRect.y))
         screen.blit(enemyImage,(enemyRect.x, enemyRect.y))
 
-
+        for coinRect in coinRects:
+            # Load the coin image and scale it to fit the coinRect
+            coinImage = pygame.image.load("coin.png").convert_alpha()
+            coinImage = pygame.transform.scale(coinImage, (coinRect.width, coinRect.height))
+            screen.blit(coinImage, (coinRect.x, coinRect.y))
 
         storedRect = playerRect.copy()
 

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main">
-      <change afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Game Project New.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game Project New.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level 2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randCoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AidenKovarovics/GameProject.git&quot;,
-    &quot;accountId&quot;: &quot;dd507614-7318-4888-8c70-a2a169d98caf&quot;
+    &quot;accountId&quot;: &quot;339c0184-105d-4e9b-881c-2a8c57e15355&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -62,7 +62,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
