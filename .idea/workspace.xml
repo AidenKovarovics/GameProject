@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main">
-      <change beforePath="$PROJECT_DIR$/.idea/Game Project New.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game Project New.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="General coin idea, just need to fix image and locations">
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/randCoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
     </list>
@@ -115,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729827658185</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="General coin idea, just need to fix image and locations">
+      <option name="closed" value="true" />
+      <created>1730879949009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730879949009</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +139,7 @@
     <MESSAGE value="Started on level 1 and movement controls" />
     <MESSAGE value="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character" />
     <MESSAGE value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
+    <MESSAGE value="General coin idea, just need to fix image and locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="General coin idea, just need to fix image and locations" />
   </component>
 </project>

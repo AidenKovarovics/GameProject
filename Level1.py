@@ -18,6 +18,8 @@ def level_one():
 
     coinCount = 4
 
+    level = 1
+
     #screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
@@ -48,7 +50,7 @@ def level_one():
     enemyImage = pygame.transform.scale(enemyImage, (enemyRect.width, enemyRect.height))
 
 
-    coinRects = rand_coin(screen, coinCount)
+    coinRects = rand_coin(screen, coinCount, level)
 
     #main loop
     while True:
