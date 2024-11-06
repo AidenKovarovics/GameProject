@@ -3,6 +3,7 @@ import pygame
 
 def touching_wall(screen, rect):
     # Check all edges: top, bottom, left, and right
+    #had to do this because rect.top just gives a center point
     for x in range(rect.left, rect.right):
         if screen.get_at((x, rect.top)) == (0, 0, 0, 255):  # Top edge
             return True

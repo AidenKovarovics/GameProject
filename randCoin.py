@@ -3,14 +3,19 @@ import random
 
 
 def rand_coin(screen, count, level):
+
+
     if level == 1:
         # level 1 coords
         coinLocations = [
-            (50, 50), (100, 150), (200, 200), (300, 250), (400, 100),
-            (150, 300), (250, 400), (350, 50), (450, 150), (500, 300)
+            (100, 100), (200, 100), (300, 100), (800, 325) #figure out good coords for coins
+
         ]
     # if level == 2:
     #     level 2 coords
+
+
+
 
     # List to hold all coin objects (if needed later for updates or interaction)
     coinList = []
@@ -25,7 +30,7 @@ def rand_coin(screen, count, level):
             randX, randY = random.choice(coinLocations)
 
             # Create a Rect object for the coin's position
-            coinRect = pygame.Rect(randX, randY, 50, 50)
+            coinRect = pygame.Rect(randX, randY, 32, 32)
 
             # Check if this coin overlaps with any existing coins
             overlap = False

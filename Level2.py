@@ -1,3 +1,8 @@
+#Aiden
+
+#have to move with rectanlge to avoid lava
+#make platform that swings open and drops blob into lava
+
 import pygame
 import sys
 from MoveControl import movement_controls
@@ -5,7 +10,7 @@ from WallCheck import touching_wall
 from randCoin import rand_coin
 
 
-def level_one():
+def level_two():
 
     #initialize pygame
     pygame.init()
@@ -18,7 +23,7 @@ def level_one():
 
     coinCount = 4
 
-    level = 1
+    level = 2
 
     playerCoins = 0
 
