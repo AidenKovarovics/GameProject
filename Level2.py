@@ -19,7 +19,7 @@ def level_two():
     screenWidth = 1200
     screenHeight = 792
     mazeStartCoordx = 25
-    mazeStartCoordy = 420
+    mazeStartCoordy = 30
 
     coinCount = 4
 
@@ -33,12 +33,12 @@ def level_two():
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
     #load maze template / adjust to scale
-    mazeTemplate = pygame.image.load("maze-template-game.svg").convert_alpha()
+    mazeTemplate = pygame.image.load("level2Maze.svg").convert_alpha()
     mazeTemplate = pygame.transform.rotate(mazeTemplate, 90)
     mazeTemplate = pygame.transform.scale(mazeTemplate, (screenWidth, screenHeight))
 
     #load grass background
-    grassBackground = pygame.image.load("grass-background.PNG").convert()
+    grassBackground = pygame.image.load("level2Floor.png").convert()
     grassBackground = pygame.transform.scale(grassBackground, (screenWidth, screenHeight))
 
 
@@ -50,11 +50,11 @@ def level_two():
     playerImage = pygame.image.load("RemasteredBlob.png").convert_alpha()
     playerImage = pygame.transform.scale(playerImage, (playerRect.width, playerRect.height))
 
-    #enemy
+    #enemy dart boards
     enemyRect = pygame.Rect(1100, 180, 60, 30)
-    enemyMovement = 3
+    #enemyMovement = 3
 
-    #enemy image load
+    #enemy dart boards image load
     enemyImage = pygame.image.load("enemy rectangle.png").convert_alpha()
     enemyImage = pygame.transform.scale(enemyImage, (enemyRect.width, enemyRect.height))
 
@@ -89,7 +89,7 @@ def level_two():
 
 
         screen.blit(playerImage, (playerRect.x, playerRect.y))
-        screen.blit(enemyImage,(enemyRect.x, enemyRect.y))
+        #screen.blit(enemyImage,(enemyRect.x, enemyRect.y))
 
         if exitDoor == False:
             screen.blit(doorImage, (doorRect.x, doorRect.y))
@@ -117,17 +117,17 @@ def level_two():
             playerRect = storedRect
 
         #enemy rect movement
-        enemyRect = enemyRect.move(enemyMovement, 0)
+        #enemyRect = enemyRect.move(enemyMovement, 0)
 
-        if enemyRect.x >= 1125:
-            enemyMovement = -1
-        if enemyRect.x <= 960:
-            enemyMovement = 1
+        #if enemyRect.x >= 1125:
+            #enemyMovement = -1
+        #if enemyRect.x <= 960:
+            #enemyMovement = 1
 
         #check for player collision
-        if playerRect.colliderect(enemyRect) == True:
-            levelRestart = True
-            return levelRestart
+        #if playerRect.colliderect(enemyRect) == True:
+            #levelRestart = True
+            #return levelRestart
 
 
         if playerRect.colliderect(doorRect) == True and exitDoor == False:
@@ -153,3 +153,4 @@ def level_two():
         pygame.display.flip()
         pygame.time.Clock().tick(60)
 
+level_two()

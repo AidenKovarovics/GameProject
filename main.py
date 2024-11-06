@@ -1,7 +1,7 @@
 import pygame
 import sys
 from Level1 import level_one
-from Level2 import level_two
+#from Level2 import level_two
 
 while True:
     level_one()
