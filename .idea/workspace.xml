@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Finished level 2 besides coin locations">
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Start Screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Start Screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730957271296</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen">
+      <option name="closed" value="true" />
+      <created>1731041224347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731041224347</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +187,7 @@
     <MESSAGE value="Just need to edit locations and add new code for level 2 + 3" />
     <MESSAGE value="starting level 2" />
     <MESSAGE value="Finished level 2 besides coin locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished level 2 besides coin locations" />
+    <MESSAGE value="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen" />
   </component>
 </project>

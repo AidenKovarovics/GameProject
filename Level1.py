@@ -27,6 +27,19 @@ def level_one():
     # Screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
+    # Load sound
+    bgdMusic = pygame.mixer.Sound('level1music.mp3')
+    pygame.mixer.Sound.play(bgdMusic)
+    bgdMusic.set_volume(0.1)
+
+    #coin collect sound
+    coinSound = pygame.mixer.Sound('coincollectsound.mp3')
+    coinSound.set_volume(0.2)
+
+    #goblin death sound
+    goblinDeath = pygame.mixer.Sound('goblin-cackle-87566.mp3')
+    goblinDeath.set_volume(0.2)
+
     # Load maze template / adjust to scale
     mazeTemplate = pygame.image.load("maze-template-game.svg").convert_alpha()
     mazeTemplate = pygame.transform.rotate(mazeTemplate, 90)
@@ -142,8 +155,22 @@ def level_one():
             enemyMovement3 = 2  # Move down
 
         # Check for player collision with enemies
-        if playerRect.colliderect(enemyRect) or playerRect.colliderect(enemyRect2) or playerRect.colliderect(enemyRect3):
-            levelRestart = True
+        if playerRect.colliderect(enemyRect):
+            pygame.mixer.Sound.play(goblinDeath)
+            pygame.mixer.Sound.stop(bgdMusic)
+            levelRestart = 'restart'
+            return levelRestart
+
+        if playerRect.colliderect(enemyRect2):
+            pygame.mixer.Sound.play(goblinDeath)
+            pygame.mixer.Sound.stop(bgdMusic)
+            levelRestart = 'restart'
+            return levelRestart
+
+        if playerRect.colliderect(enemyRect3):
+            pygame.mixer.Sound.play(goblinDeath)
+            pygame.mixer.Sound.stop(bgdMusic)
+            levelRestart = 'restart'
             return levelRestart
 
         # Check for player collision with door
@@ -158,6 +185,7 @@ def level_one():
             if playerRect.colliderect(check):
                 coinRects.remove(check)
                 playerCoins += 1
+                pygame.mixer.Sound.play(coinSound)
                 if playerCoins == coinCount:
                     exitDoor = True
                     break

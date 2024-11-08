@@ -225,11 +225,11 @@ def level_two():
         #check for arrow collision
         for arrows in arrowList1:
             if playerRect.colliderect(arrows):
-                levelRestart = True
+                levelRestart = 'restart'
                 return levelRestart
         for arrows1 in arrowList2:
             if playerRect.colliderect(arrows1):
-                levelRestart = True
+                levelRestart = 'restart'
                 return levelRestart
 
         #check for lava collision
@@ -251,7 +251,7 @@ def level_two():
         # Check for lava collision only if the player is not on a bridge
         if (playerRect.colliderect(lavaRect1) or playerRect.colliderect(lavaRect2)) and not onBridge:
             levelRestart = True
-            return levelRestart
+            return 'restart'
 
         # final screen updates + clock adjusts
         pygame.display.flip()

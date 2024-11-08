@@ -1,4 +1,4 @@
-from turtledemo.nim import SCREENWIDTH, SCREENHEIGHT
+
 
 import pygame
 import sys
@@ -6,7 +6,8 @@ import sys
 pygame.init()
 
 # Load sound and background image
-#game_sound = pygame.mixer.Sound('cinematic-intro-6097.mp3')
+game_sound = pygame.mixer.Sound('startscreenmusic.mp3')
+pygame.mixer.Sound.play(game_sound)
 
 
 # Screen dimensions and colors
@@ -18,7 +19,7 @@ Green = (0, 255, 0)
 
 
 background_image = pygame.image.load('startscreen-overlay.jpg')
-background_image = pygame.transform.scale(background_image, (SCREENWIDTH, SCREENHEIGHT))# Load your background image here
+background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))# Load your background image here
 # Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Start Screen")
