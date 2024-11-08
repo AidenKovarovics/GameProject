@@ -21,6 +21,9 @@ def level_two():
     playerCoins = 0
     exitDoor = False
 
+    platMovement1 = 1
+    platMovement2 = 1
+
     # screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
@@ -72,6 +75,30 @@ def level_two():
     dartImage2 = pygame.transform.rotate(dartImage2, 90)
     dartImage2 = pygame.transform.scale(dartImage2, (dartRect2.width, dartRect2.height))
 
+    #lava pit
+    lavaRect1 = pygame.Rect(95, 83, 68, 240)
+    lavaRect2 = pygame.Rect(872, 710, 245, 68)
+
+    lavaImage1 = pygame.image.load("lava.png").convert_alpha()
+    lavaImage1 = pygame.transform.scale(lavaImage1, (lavaRect1.width, lavaRect1.height))
+
+    lavaImage2 = pygame.image.load("lava.png").convert_alpha()
+    lavaImage2 = pygame.transform.rotate(lavaImage2,90)
+    lavaImage2 = pygame.transform.scale(lavaImage2, (lavaRect2.width, lavaRect2.height))
+
+    #bridges
+    bridgeRect1 = pygame.Rect(95, 65, 68, 120)
+    bridgeRect2 = pygame.Rect(850, 710, 120, 68)
+
+    bridgeImage1 = pygame.image.load("bridge_bgd-removebg-preview.png").convert_alpha()
+    bridgeImage1 = pygame.transform.rotate(bridgeImage1, 90)
+    bridgeImage1 = pygame.transform.scale(bridgeImage1, (bridgeRect1.width, bridgeRect1.height))
+
+    bridgeImage2 = pygame.image.load("bridge_bgd-removebg-preview.png").convert_alpha()
+    bridgeImage2 = pygame.transform.scale(bridgeImage2, (bridgeRect2.width, bridgeRect2.height))
+
+
+
     # coin spawning
     coinRects = rand_coin(screen, coinCount, level)
 
@@ -99,9 +126,34 @@ def level_two():
         screen.blit(grassBackground, (0, 0))
         screen.blit(mazeTemplate, (0, 0))
 
-        screen.blit(playerImage, (playerRect.x, playerRect.y))
+
         screen.blit(dartImage, (dartRect1.x, dartRect1.y))
         screen.blit(dartImage2, (dartRect2.x, dartRect2.y))
+
+        screen.blit(lavaImage1, (lavaRect1.x, lavaRect1.y))
+        screen.blit(lavaImage2, (lavaRect2.x, lavaRect2.y))
+
+
+        screen.blit(bridgeImage1, (bridgeRect1.x, bridgeRect1.y))
+        screen.blit(bridgeImage2, (bridgeRect2.x, bridgeRect2.y))
+
+        screen.blit(playerImage, (playerRect.x, playerRect.y))
+
+        #bridge movement
+        bridgeRect1 = bridgeRect1.move(0, platMovement1)
+        bridgeRect2 = bridgeRect2.move(platMovement2, 0)
+
+        if bridgeRect1.top <= 50:
+            platMovement1 = 1
+        if bridgeRect1.bottom >= 390:
+            platMovement1 = -1
+
+        if bridgeRect2.right >= 1185:
+            platMovement2 = -1
+        if bridgeRect2.left <= 800:
+            platMovement2 = 1
+
+
 
         # Arrow movement and blitting (right arrows)
         arrowList1 = [arrowRect1, arrowRect2, arrowRect3]
@@ -180,6 +232,26 @@ def level_two():
                 levelRestart = True
                 return levelRestart
 
+        #check for lava collision
+        # Initialize onBridge as False
+        onBridge = False
+
+        rightBuffer = 20
+
+        # Check if the player is within the vertical bounds of bridgeRect1
+        # and horizontally aligned with it (since bridgeRect1 moves up and down)
+        if bridgeRect1.left <= playerRect.centerx <= bridgeRect1.right + rightBuffer and bridgeRect1.top <= playerRect.centery <= bridgeRect1.bottom:
+            onBridge = True
+
+        # Check if the player is within the horizontal bounds of bridgeRect2
+        # and vertically aligned with it (since bridgeRect2 moves left and right)
+        elif bridgeRect2.left <= playerRect.centerx <= bridgeRect2.right and bridgeRect2.top <= playerRect.centery <= bridgeRect2.bottom:
+            onBridge = True
+
+        # Check for lava collision only if the player is not on a bridge
+        if (playerRect.colliderect(lavaRect1) or playerRect.colliderect(lavaRect2)) and not onBridge:
+            levelRestart = True
+            return levelRestart
 
         # final screen updates + clock adjusts
         pygame.display.flip()

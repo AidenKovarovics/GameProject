@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="starting level 2">
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Finished level 2 besides coin locations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Start Screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Start Screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Level 1.executor": "Run",
-    "Python.Level1.executor": "Run",
-    "Python.Level2.executor": "Run",
-    "Python.MoveControl.executor": "Run",
-    "Python.Movement.executor": "Run",
-    "Python.Start Screen.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.randCoin.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Level 1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Level1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Level2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MoveControl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Movement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start Screen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.randCoin.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -146,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730935413250</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished level 2 besides coin locations">
+      <option name="closed" value="true" />
+      <created>1730957271296</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730957271296</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +180,7 @@
     <MESSAGE value="Just need to edit locations and fix imaging for coins" />
     <MESSAGE value="Just need to edit locations and add new code for level 2 + 3" />
     <MESSAGE value="starting level 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting level 2" />
+    <MESSAGE value="Finished level 2 besides coin locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished level 2 besides coin locations" />
   </component>
 </project>
