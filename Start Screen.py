@@ -1,34 +1,47 @@
-#Jace
+
+
 import pygame
 import sys
 
 pygame.init()
-game_sound = pygame.mixer.Sound('cinematic-intro-6097.mp3')
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
 
-#Colors of the Screen
+# Load sound and background image
+game_sound = pygame.mixer.Sound('startscreenmusic.mp3')
+pygame.mixer.Sound.play(game_sound)
+
+
+# Screen dimensions and colors
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT = 792
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 Green = (0, 255, 0)
 
+
+background_image = pygame.image.load('startscreen-overlay.jpg')
+background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))# Load your background image here
+# Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Maze Game")
+pygame.display.set_caption("Start Screen")
 
-font_title = pygame.font.Font(None, 74)
-font_instructions = pygame.font.Font(None, 36)
+# Fonts and text rendering
+font_title = pygame.font.Font('Alucrads.ttf', 150)
+font_instructions = pygame.font.Font('Alucrads.ttf', 80)
 
-title_text = font_title.render("MAZE GAME", True, Green)
+title_text = font_title.render("The Adventures of Blob", True, WHITE)
 instructions_text = font_instructions.render("Press any key to start", True, WHITE)
+
+# Scale the background image to fit the screen
+background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 
 def start_screen():
     running = True
     while running:
-        screen.fill(BLACK)
-        screen.blit(title_text, (SCREEN_WIDTH // 2 - title_text.get_width() // 2, SCREEN_HEIGHT // 2 - 100))
+        screen.blit(background_image, (0, 0))  # Draw the background image
+        screen.blit(title_text, (SCREEN_WIDTH // 2 - title_text.get_width() // 2, 80))
         screen.blit(instructions_text,
-                    (SCREEN_WIDTH // 2 - instructions_text.get_width() // 2, SCREEN_HEIGHT // 2 + 50))
+                    (SCREEN_WIDTH // 2 - instructions_text.get_width() // 2, 700))
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -39,11 +52,6 @@ def start_screen():
 
         pygame.display.flip()
 
-
-def main():
-    start_screen()
-    #Main Game Loop
-
-if __name__ == "__main__":
-    main()
-    pygame.quit()
+# Start the game
+start_screen()
+pygame.quit()

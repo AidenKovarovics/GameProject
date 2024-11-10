@@ -9,12 +9,11 @@ def rand_coin(screen, count, level):
         # level 1 coords
         coinLocations = [
             (100, 100), (200, 100), (300, 100), (800, 325) #figure out good coords for coins
-
         ]
-    # if level == 2:
-    #     level 2 coords
-
-
+    if level == 2:
+        coinLocations = [
+            (800, 357), (800, 389), (800, 421), (800, 325)
+            ] #figure out good coords for coins
 
 
     # List to hold all coin objects (if needed later for updates or interaction)

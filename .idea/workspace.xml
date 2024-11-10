@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Just need to edit locations and fix imaging for coins">
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WallCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/WallCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maze-template-game.svg" beforeDir="false" afterPath="$PROJECT_DIR$/maze-template-game.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/randCoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Start Screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Start Screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Level 1.executor": "Run",
-    "Python.Level1.executor": "Run",
-    "Python.MoveControl.executor": "Run",
-    "Python.Movement.executor": "Run",
-    "Python.Start Screen.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.randCoin.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Level 1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Level1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Level2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MoveControl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Movement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start Screen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.randCoin.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -135,7 +131,39 @@
       <option name="project" value="LOCAL" />
       <updated>1730880377336</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Just need to edit locations and add new code for level 2 + 3">
+      <option name="closed" value="true" />
+      <created>1730919678947</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730919678947</updated>
+    </task>
+    <task id="LOCAL-00009" summary="starting level 2">
+      <option name="closed" value="true" />
+      <created>1730935413250</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730935413250</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Finished level 2 besides coin locations">
+      <option name="closed" value="true" />
+      <created>1730957271296</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730957271296</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen">
+      <option name="closed" value="true" />
+      <created>1731041224347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731041224347</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +184,10 @@
     <MESSAGE value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
     <MESSAGE value="General coin idea, just need to fix image and locations" />
     <MESSAGE value="Just need to edit locations and fix imaging for coins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just need to edit locations and fix imaging for coins" />
+    <MESSAGE value="Just need to edit locations and add new code for level 2 + 3" />
+    <MESSAGE value="starting level 2" />
+    <MESSAGE value="Finished level 2 besides coin locations" />
+    <MESSAGE value="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remaining Tasks:&#10;-Combine screens into main file&#10;-Add sounds for coins + deaths + doors opening + background music dif each level&#10;-Create end screen" />
   </component>
 </project>
