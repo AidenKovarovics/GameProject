@@ -52,5 +52,5 @@ def start_screen():
                 return running
 
         pygame.display.flip()
-
+start_screen()
 
