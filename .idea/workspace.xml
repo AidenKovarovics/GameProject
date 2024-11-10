@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="test">
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="test 2">
+      <change afterPath="$PROJECT_DIR$/InstructionScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Game Project New.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game Project New.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level 3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Instruction Screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StartScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -50,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Instruction Screen.executor": "Run",
     "Python.Level 1.executor": "Run",
     "Python.Level 3.executor": "Run",
     "Python.Level1.executor": "Run",
@@ -143,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731270285230</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="test 2">
+      <option name="closed" value="true" />
+      <created>1731272601628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731272601628</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,13 +170,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test 2" />
     <MESSAGE value="Started on level 1 and movement controls" />
     <MESSAGE value="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character" />
     <MESSAGE value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
     <MESSAGE value="General coin idea, just need to fix image and locations" />
     <MESSAGE value="Just need to edit locations and fix imaging for coins" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 2" />
   </component>
 </project>

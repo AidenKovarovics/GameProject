@@ -232,6 +232,15 @@ def level_two():
                 levelRestart = 'restart'
                 return levelRestart
 
+
+        # Get the mouse position
+        mouse_x, mouse_y = pygame.mouse.get_pos()
+
+        # Print the mouse coordinates to the console
+        print(f"Mouse Position: ({mouse_x}, {mouse_y})")
+
+
+
         #check for lava collision
         # Initialize onBridge as False
         onBridge = False
@@ -256,5 +265,6 @@ def level_two():
         # final screen updates + clock adjusts
         pygame.display.flip()
         pygame.time.Clock().tick(60)
+level_two()
 
 

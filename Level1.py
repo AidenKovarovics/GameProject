@@ -133,6 +133,16 @@ def level_one():
         if touchingWall == True:
             playerRect = storedRect
 
+        # Get the mouse position
+        mouse_x, mouse_y = pygame.mouse.get_pos()
+
+        # Print the mouse coordinates to the console
+        print(f"Mouse Position: ({mouse_x}, {mouse_y})")
+
+
+
+
+
         # First enemy horizontal movement
         enemyRect = enemyRect.move(enemyMovement, 0)
         if enemyRect.x >= 1125:
@@ -194,3 +204,4 @@ def level_one():
         # Final screen updates + clock adjustments
         pygame.display.flip()
         pygame.time.Clock().tick(60)
+level_one()

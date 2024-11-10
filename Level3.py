@@ -68,5 +68,4 @@ def end_screen():
         # Limit frame rate to 60 FPS
         clock.tick(60)
 
-# Run the end screen
-end_screen()
+

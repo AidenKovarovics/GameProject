@@ -48,10 +48,12 @@ def start_screen():
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
+                pygame.mixer.Sound.stop(game_sound)
                 running = False
                 return running
 
+
         pygame.display.flip()
-start_screen()
+
 
 
