@@ -178,6 +178,7 @@ def level_one():
             playerRect = storedRect
         elif playerRect.colliderect(doorRect) == True and exitDoor == True:
             levelComplete1 = True
+            pygame.mixer.Sound.stop(bgdMusic)
             return levelComplete1
 
         # Check for coin collection
