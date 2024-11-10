@@ -206,7 +206,7 @@ def level_two():
             playerRect = storedRect
         elif playerRect.colliderect(doorRect) and exitDoor:
             levelComplete = True
-            return levelComplete
+            return levelComplete2
 
         # check for player collision with coins
         for check in coinRects:
