@@ -1,4 +1,4 @@
-from curses import start_color
+
 
 import pygame
 import sys
@@ -9,13 +9,14 @@ from StartScreen import start_screen
 
 
 # Track the current level
-current_level = 1
+current_level = 0
 
 while True:
     if current_level == 0:
         result = start_screen()
         if result == False:
             current_level = 1
+
     if current_level == 1:
         result = level_one()  # Run level one and store result
         if result == True:  # If level_one returns levelComplete (level is complete)
