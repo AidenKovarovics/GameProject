@@ -16,17 +16,14 @@ def start_screen():
     SCREEN_WIDTH = 1200
     SCREEN_HEIGHT = 792
     WHITE = (255, 255, 255)
-    BLACK = (0, 0, 0)
-    Green = (0, 255, 0)
 
     background_image = pygame.image.load('startscreen-overlay.jpg')
     background_image = pygame.transform.scale(background_image,
-                                              (SCREEN_WIDTH, SCREEN_HEIGHT))  # Load your background image here
+                                              (SCREEN_WIDTH, SCREEN_HEIGHT))
     # Set up the display
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption("Start Screen")
 
-    # Fonts and text rendering
     font_title = pygame.font.Font('Alucrads.ttf', 150)
     font_instructions = pygame.font.Font('Alucrads.ttf', 80)
 

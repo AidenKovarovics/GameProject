@@ -10,7 +10,7 @@ def level_one():
     # Initialize pygame
     pygame.init()
 
-    # Constants
+    #constants
     screenWidth = 1200
     screenHeight = 792
     mazeStartCoordx = 25
@@ -24,10 +24,10 @@ def level_one():
 
     exitDoor = False
 
-    # Screen setup
+    #screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
-    # Load sound
+    #load background sound
     bgdMusic = pygame.mixer.Sound('level1music.mp3')
     pygame.mixer.Sound.play(bgdMusic)
     bgdMusic.set_volume(0.1)
@@ -36,64 +36,59 @@ def level_one():
     coinSound = pygame.mixer.Sound('coincollectsound.mp3')
     coinSound.set_volume(0.2)
 
-    #goblin death sound
-    goblinDeath = pygame.mixer.Sound('goblin-cackle-87566.mp3')
-    goblinDeath.set_volume(0.2)
 
-    # Load maze template / adjust to scale
+
+    #load maze template / adjust to scale
     mazeTemplate = pygame.image.load("maze-template-game.svg").convert_alpha()
     mazeTemplate = pygame.transform.rotate(mazeTemplate, 90)
     mazeTemplate = pygame.transform.scale(mazeTemplate, (screenWidth, screenHeight))
 
-    # Load grass background
+    #load grass background
     grassBackground = pygame.image.load("grass-background.PNG").convert()
     grassBackground = pygame.transform.scale(grassBackground, (screenWidth, screenHeight))
 
-    # Player
+    #player
     playerRect = pygame.Rect(mazeStartCoordx, mazeStartCoordy, 44, 30)
 
-    # Player image load
+    #player image load
     playerImage = pygame.image.load("RemasteredBlob.png").convert_alpha()
     playerImage = pygame.transform.scale(playerImage, (playerRect.width, playerRect.height))
 
-    # First enemy (horizontal)
+    #enemy loading
     enemyRect = pygame.Rect(1100, 180, 60, 30)
     enemyMovement = 2
 
-    # First enemy image load
+    #enemy image load
     enemyImage = pygame.image.load("enemy rectangle.png").convert_alpha()
     enemyImage = pygame.transform.scale(enemyImage, (enemyRect.width, enemyRect.height))
 
-    # Second enemy (horizontal, lower left corner)
+
     enemyRect2 = pygame.Rect(20, 720, 50, 50)
     enemyMovement2 = 2
 
-    # Second enemy image load
+
     enemyImage2 = pygame.image.load("goblin.png").convert_alpha()
     enemyImage2 = pygame.transform.scale(enemyImage2, (enemyRect2.width, enemyRect2.height))
 
-    # Third enemy (vertical, center of screen)
     enemyRect3 = pygame.Rect(420, 300, 50, 50)
     enemyMovement3 = 2
 
-    # Third enemy image load
     enemyImage3 = pygame.image.load("squareenemy-removebg-preview.png").convert_alpha()
     enemyImage3 = pygame.transform.scale(enemyImage3, (enemyRect3.width, enemyRect3.height))
 
-    # Coin spawning
+    #coin spawning
     coinRects = rand_coin(screen, coinCount, level)
 
-    # Door
+    #door
     doorRect = pygame.Rect(1186, 325, 10, 65)
 
-    # Door image load
+    #door image load
     doorImage = pygame.image.load("level1Door.png").convert_alpha()
     doorImage = pygame.transform.scale(doorImage, (doorRect.width, doorRect.height))
 
-    # Main loop
     while True:
 
-        # Exit functions
+        #exit functions
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -103,7 +98,7 @@ def level_one():
                     pygame.quit()
                     sys.exit()
 
-        # Screen updates
+        #screen updates
         screen.fill((255, 255, 255))
         screen.blit(grassBackground, (0, 0))
         screen.blit(mazeTemplate, (0, 0))
@@ -116,7 +111,7 @@ def level_one():
         if exitDoor == False:
             screen.blit(doorImage, (doorRect.x, doorRect.y))
 
-        # Coin blitting
+        #coin blitting
         for coinRect in coinRects:
             coinImage = pygame.image.load("CoinFrame 1.png").convert_alpha()
             coinImage = pygame.transform.scale(coinImage, (coinRect.width, coinRect.height))
@@ -124,66 +119,54 @@ def level_one():
 
         storedRect = playerRect.copy()
 
-        # Movement controls
+        #movement controls
         movementLR, movementUD = movement_controls()
         playerRect = playerRect.move(movementLR, movementUD)
 
-        # Check for wall collision
+        #check for wall collision
         touchingWall = touching_wall(screen, playerRect)
         if touchingWall == True:
             playerRect = storedRect
 
-        # Get the mouse position
-        mouse_x, mouse_y = pygame.mouse.get_pos()
-
-        # Print the mouse coordinates to the console
-        print(f"Mouse Position: ({mouse_x}, {mouse_y})")
 
 
 
-
-
-        # First enemy horizontal movement
+        #enemy movement
         enemyRect = enemyRect.move(enemyMovement, 0)
         if enemyRect.x >= 1125:
             enemyMovement = -2
         if enemyRect.x <= 960:
             enemyMovement = 2
 
-        # Second enemy horizontal movement (moving left and right)
         enemyRect2 = enemyRect2.move(enemyMovement2, 0)
         if enemyRect2.x >= 420:
             enemyMovement2 = -2
         if enemyRect2.x <= 20:
             enemyMovement2 = 2
 
-        # Third enemy vertical movement (moving up and down)
         enemyRect3 = enemyRect3.move(0, enemyMovement3)
         if enemyRect3.y >= 480:  # Bottom limit
             enemyMovement3 = -2  # Move up
         if enemyRect3.y <= 250:  # Top limit
             enemyMovement3 = 2  # Move down
 
-        # Check for player collision with enemies
+        #check for player collision with enemies
         if playerRect.colliderect(enemyRect):
-            pygame.mixer.Sound.play(goblinDeath)
             pygame.mixer.Sound.stop(bgdMusic)
             levelRestart = 'restart'
             return levelRestart
 
         if playerRect.colliderect(enemyRect2):
-            pygame.mixer.Sound.play(goblinDeath)
             pygame.mixer.Sound.stop(bgdMusic)
             levelRestart = 'restart'
             return levelRestart
 
         if playerRect.colliderect(enemyRect3):
-            pygame.mixer.Sound.play(goblinDeath)
             pygame.mixer.Sound.stop(bgdMusic)
             levelRestart = 'restart'
             return levelRestart
 
-        # Check for player collision with door
+        #check for player collision with door
         if playerRect.colliderect(doorRect) == True and exitDoor == False:
             playerRect = storedRect
         elif playerRect.colliderect(doorRect) == True and exitDoor == True:
@@ -191,7 +174,7 @@ def level_one():
             pygame.mixer.Sound.stop(bgdMusic)
             return levelComplete1
 
-        # Check for coin collection
+        #check for coin collection
         for check in coinRects:
             if playerRect.colliderect(check):
                 coinRects.remove(check)
@@ -201,7 +184,6 @@ def level_one():
                     exitDoor = True
                     break
 
-        # Final screen updates + clock adjustments
+        #final screen updates + clock adjustments
         pygame.display.flip()
         pygame.time.Clock().tick(60)
-level_one()

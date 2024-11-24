@@ -26,6 +26,14 @@ def level_two():
 
     # screen setup
     screen = pygame.display.set_mode((screenWidth, screenHeight))
+    # Load sound
+    bgdMusic = pygame.mixer.Sound('dwarven-forges-213935.mp3')
+    pygame.mixer.Sound.play(bgdMusic)
+    bgdMusic.set_volume(0.1)
+
+    #coin collect sound
+    coinSound = pygame.mixer.Sound('coincollectsound.mp3')
+    coinSound.set_volume(0.2)
 
     # load maze template / adjust to scale
     mazeTemplate = pygame.image.load("level2Maze.svg").convert_alpha()
@@ -47,23 +55,21 @@ def level_two():
     dartRect1 = pygame.Rect(566, 330, 15, 127)
     dartRect2 = pygame.Rect(890, 531, 127, 15)
 
-    # Define each arrow Rect directly with hardcoded positions (right arrows)
+    #enemy arrows
     arrowRect1 = pygame.Rect(575, 335, 25, 8)
-    arrowRect2 = pygame.Rect(575, 390, 25, 8)  # 15 pixels lower than arrowRect1
-    arrowRect3 = pygame.Rect(575, 445, 25, 8)  # 15 pixels lower than arrowRect2
+    arrowRect2 = pygame.Rect(575, 390, 25, 8)
+    arrowRect3 = pygame.Rect(575, 445, 25, 8)
 
-    # Define each arrow Rect for downward movement (from second dart shooter)
-    arrowRect4 = pygame.Rect(890, 530, 8, 25)  # Adjust for downward arrows
-    arrowRect5 = pygame.Rect(945, 530, 8, 25)  # 15 pixels lower than arrowRect4
-    arrowRect6 = pygame.Rect(1000, 530, 8, 25)  # 15 pixels lower than arrowRect5
+    arrowRect4 = pygame.Rect(890, 530, 8, 25)
+    arrowRect5 = pygame.Rect(945, 530, 8, 25)
+    arrowRect6 = pygame.Rect(1000, 530, 8, 25)
 
     # Load arrow images
     arrowImage = pygame.image.load("enemyarrow.png").convert_alpha()
     arrowImage = pygame.transform.scale(arrowImage, (25, 8))
 
-    # Rotate arrow 2 for downward movement
     arrowImage2 = pygame.image.load("enemyarrow.png").convert_alpha()
-    arrowImage2 = pygame.transform.rotate(arrowImage2, 90)  # Rotate for downward movement
+    arrowImage2 = pygame.transform.rotate(arrowImage2, 90)
     arrowImage2 = pygame.transform.scale(arrowImage2, (8, 25))
 
     # enemy dart board 1 image load
@@ -109,7 +115,6 @@ def level_two():
     doorImage = pygame.image.load("level1Door.png").convert_alpha()
     doorImage = pygame.transform.scale(doorImage, (doorRect.width, doorRect.height))
 
-    # main loop
     while True:
         # exit functions
         for event in pygame.event.get():
@@ -155,30 +160,24 @@ def level_two():
 
 
 
-        # Arrow movement and blitting (right arrows)
+        #arrow movement and blitting
         arrowList1 = [arrowRect1, arrowRect2, arrowRect3]
         arrowList2 = [arrowRect4, arrowRect5, arrowRect6]
         for arrowRect in arrowList1:
-            # Move arrow right
-            arrowRect.x += 1  # Move by 1 pixel to the right
+            arrowRect.x += 1
 
-            # Reset arrow position if it reaches the end point
             if arrowRect.x >= 770:
-                arrowRect.x = 575  # Reset to initial x position
+                arrowRect.x = 575
 
-            # Blit each arrow
             screen.blit(arrowImage, (arrowRect.x, arrowRect.y))
 
-        # Arrow movement and blitting (downward arrows)
+
         for arrowRect in arrowList2:
-            # Move arrow downward
-            arrowRect.y -= 1  # Move by 1 pixel downward
+            arrowRect.y -= 1
 
-            # Reset arrow position if it reaches the bottom
             if arrowRect.y <= 245:
-                arrowRect.y = 530  # Reset to initial y position (adjust this if needed)
+                arrowRect.y = 530
 
-            # Blit each downward arrow
             screen.blit(arrowImage2, (arrowRect.x, arrowRect.y))
 
         if not exitDoor:
@@ -186,7 +185,6 @@ def level_two():
 
         # coin blitting
         for coinRect in coinRects:
-            # Load the coin image and scale it to fit the coinRect
             coinImage = pygame.image.load("CoinFrame 1.png").convert_alpha()
             coinImage = pygame.transform.scale(coinImage, (coinRect.width, coinRect.height))
             screen.blit(coinImage, (coinRect.x, coinRect.y))
@@ -206,6 +204,7 @@ def level_two():
             playerRect = storedRect
         elif playerRect.colliderect(doorRect) and exitDoor:
             levelComplete2 = True
+            pygame.mixer.Sound.stop(bgdMusic)
             return levelComplete2
 
         # check for player collision with coins
@@ -213,6 +212,7 @@ def level_two():
             if playerRect.colliderect(check):
                 coinRects.remove(check)
                 playerCoins += 1
+                pygame.mixer.Sound.play(coinSound)
                 if playerCoins == coinCount:
                     exitDoor = True
                     break
@@ -226,45 +226,39 @@ def level_two():
         for arrows in arrowList1:
             if playerRect.colliderect(arrows):
                 levelRestart = 'restart'
+                pygame.mixer.Sound.stop(bgdMusic)
                 return levelRestart
         for arrows1 in arrowList2:
             if playerRect.colliderect(arrows1):
                 levelRestart = 'restart'
+                pygame.mixer.Sound.stop(bgdMusic)
                 return levelRestart
-
-
-        # Get the mouse position
-        mouse_x, mouse_y = pygame.mouse.get_pos()
-
-        # Print the mouse coordinates to the console
-        print(f"Mouse Position: ({mouse_x}, {mouse_y})")
 
 
 
         #check for lava collision
-        # Initialize onBridge as False
         onBridge = False
 
         rightBuffer = 20
 
-        # Check if the player is within the vertical bounds of bridgeRect1
-        # and horizontally aligned with it (since bridgeRect1 moves up and down)
+        #check if the player is within the bounds of bridges
         if bridgeRect1.left <= playerRect.centerx <= bridgeRect1.right + rightBuffer and bridgeRect1.top <= playerRect.centery <= bridgeRect1.bottom:
             onBridge = True
 
-        # Check if the player is within the horizontal bounds of bridgeRect2
-        # and vertically aligned with it (since bridgeRect2 moves left and right)
         elif bridgeRect2.left <= playerRect.centerx <= bridgeRect2.right and bridgeRect2.top <= playerRect.centery <= bridgeRect2.bottom:
             onBridge = True
 
-        # Check for lava collision only if the player is not on a bridge
+        #check for lava collision only if the player is not on a bridge
         if (playerRect.colliderect(lavaRect1) or playerRect.colliderect(lavaRect2)) and not onBridge:
             levelRestart = True
+            pygame.mixer.Sound.stop(bgdMusic)
+
             return 'restart'
 
-        # final screen updates + clock adjusts
+        #final screen updates + clock adjusts
         pygame.display.flip()
         pygame.time.Clock().tick(60)
-level_two()
+
+
 
 

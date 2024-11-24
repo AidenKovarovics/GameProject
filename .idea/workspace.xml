@@ -4,16 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="test 2">
-      <change afterPath="$PROJECT_DIR$/InstructionScreen.py" afterDir="false" />
+    <list default="true" id="668f9baa-ac66-44da-b181-19fa5c12e70f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dwarven-forges-213935.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/freaxy-de-small-thamba-lam-252976.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Game Project New.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game Project New.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2024_3_01_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2024_3_01_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_6_2024_7_12_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_6_2024_7_12_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instruction Screen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlobCharacterStill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlobNew.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstructionScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstructionScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Instructions.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StartScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WallCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/WallCheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinematic-intro-6097.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goblin-cackle-87566.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/randCoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/randCoin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startscreen.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +54,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AidenKovarovics/GameProject.git&quot;,
-    &quot;accountId&quot;: &quot;339c0184-105d-4e9b-881c-2a8c57e15355&quot;
+    &quot;accountId&quot;: &quot;835d94b1-9cc4-4978-a5e0-5d0c4a7736ae&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -53,10 +68,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Instruction Screen.executor": "Run",
     "Python.Level 1.executor": "Run",
     "Python.Level 3.executor": "Run",
     "Python.Level1.executor": "Run",
+    "Python.Level2.executor": "Run",
+    "Python.Level3.executor": "Run",
     "Python.MoveControl.executor": "Run",
     "Python.Movement.executor": "Run",
     "Python.Start Screen.executor": "Run",
@@ -64,13 +80,27 @@
     "Python.main.executor": "Run",
     "Python.randCoin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Jacek/Desktop/GameProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.project",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jacek\PycharmProjects\GameProject" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.347" />
+        <option value="bundled-python-sdk-c2d6afa66fbe-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.347" />
       </set>
     </attachedChunks>
   </component>
@@ -82,6 +112,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729616368189</updated>
+      <workItem from="1731542225323" duration="12000" />
+      <workItem from="1732312066448" duration="5657000" />
     </task>
     <task id="LOCAL-00001" summary="test 2">
       <option name="closed" value="true" />
@@ -147,16 +179,11 @@
       <option name="project" value="LOCAL" />
       <updated>1731270285230</updated>
     </task>
-    <task id="LOCAL-00009" summary="test 2">
-      <option name="closed" value="true" />
-      <created>1731272601628</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1731272601628</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -170,13 +197,23 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="test 2" />
     <MESSAGE value="Started on level 1 and movement controls" />
     <MESSAGE value="Added:&#10;-Level 1 Movement&#10;-Wall Checks&#10;-Blob Character" />
     <MESSAGE value="Added:&#10;-Level 1 Enemy&#10;-Restart Code&#10;-Implemented Level 1 progress into main" />
     <MESSAGE value="General coin idea, just need to fix image and locations" />
     <MESSAGE value="Just need to edit locations and fix imaging for coins" />
     <MESSAGE value="test" />
-    <MESSAGE value="test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GameProject$randCoin.coverage" NAME="randCoin Coverage Results" MODIFIED="1731275004737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$Level2.coverage" NAME="Level2 Coverage Results" MODIFIED="1731276957337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$main.coverage" NAME="main Coverage Results" MODIFIED="1732314363989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$Start_Screen.coverage" NAME="Start Screen Coverage Results" MODIFIED="1731270291223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$Level3.coverage" NAME="Level3 Coverage Results" MODIFIED="1731277144458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$StartScreen.coverage" NAME="StartScreen Coverage Results" MODIFIED="1731274145272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$Instruction_Screen.coverage" NAME="Instruction Screen Coverage Results" MODIFIED="1731274166995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameProject$Level1.coverage" NAME="Level1 Coverage Results" MODIFIED="1731276977120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

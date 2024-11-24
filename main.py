@@ -20,15 +20,15 @@ while True:
             current_level = 2
 
     elif current_level == 2:
-        result = level_one()  # Run level one and store result
-        if result == True:  # If level_one returns levelComplete (level is complete)
-            current_level = 3  # Move to level two
-        elif result == "restart":  # If level_one returns levelRestart (level needs to restart)
+        result = level_one()
+        if result == True:
+            current_level = 3
+        elif result == "restart":
             continue  # Restart level one
 
     elif current_level == 3:
-        result = level_two()  # Run level two and store result
-        if result == "restart":  # If level_two returns levelRestart
+        result = level_two()
+        if result == "restart":
             continue  # Restart level two
         elif result == True:
             current_level = 4
